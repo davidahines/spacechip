@@ -189,7 +189,7 @@
       <!-- Set Module-awareness to true -->
       <set-property property="moduleAware" value="true" />
     </plug-in>
- 
+
 
   <!-- =================================================== Validator plugin -->
 
