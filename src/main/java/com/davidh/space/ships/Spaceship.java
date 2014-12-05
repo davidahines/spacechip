@@ -1,4 +1,4 @@
-package ships;
+package com.davidh.space.ships;
 
 //
 import com.davidh.space.components.Component;
@@ -7,7 +7,6 @@ import com.davidh.space.components.Hull;
 import com.davidh.space.components.LifeSupport;
 import com.davidh.space.components.PropulsionSystem;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 //    aircraft carrier
