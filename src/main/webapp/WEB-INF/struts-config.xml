@@ -107,7 +107,7 @@
         <action-mappings>
             <!-- Default "Welcome" action -->
             <!-- Forwards to Welcome.jsp -->
-            <action path="/welcome" type="org.springframework.web.struts.DelegatingActionProxy">
+            <action path="/" type="org.springframework.web.struts.DelegatingActionProxy">
             <forward name="success" path="/pages/welcome.jsp" />
             </action>
         </action-mappings>

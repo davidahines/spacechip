@@ -6,23 +6,16 @@
                             http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
                             http://www.springframework.org/schema/security
                             http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+    <http auto-config="true">
+        <intercept-url pattern="/**" access="ROLE_ADMIN" />
+    </http>
 
-
-<http realm="Project Realm" auto-config="true">
-<intercept-url pattern="/auth/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
-<intercept-url pattern="/**" access="ROLE_ADMIN"/>
-<form-login login-page="/auth/login.jsp" authentication-failure-url="/auth/login.jsp?login_error=1"/>
-<logout logout-success-url="/auth/login.jsp"/>
-<remember-me />
-</http>
-
-<authentication-manager>
-<authentication-provider>
-    <password-encoder hash="md5"/>
-    <user-service>
-        <user name="admin" password="21232f297a57a5a743894a0e4a801fc3" authorities="ROLE_ADMIN"/>
-</user-service>
-</authentication-provider>
-        </authentication-manager>
+    <authentication-manager>
+        <authentication-provider>
+            <user-service>
+                <user name="alpha" password="pass1" authorities="ROLE_ADMIN" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
 
         </b:beans>
